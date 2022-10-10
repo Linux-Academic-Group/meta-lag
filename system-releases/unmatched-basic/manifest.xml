@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote fetch="https://git.yoctoproject.org/git/" name="yoctoproject"/>
+    <remote fetch="https://github.com" name="github"/>
+    
+    <project name="Linux-Academic-Group/meta-lag.git" remote="github" revision="1-add-manifest" path="sources/meta-lag"/>
+    <project name="openembedded/meta-openembedded.git" remote="github" revision="kirkstone" path="sources/meta-openembedded"/>
+    <project name="poky.git" remote="yoctoproject" revision="kirkstone" path="sources/poky"/>
+</manifest>
