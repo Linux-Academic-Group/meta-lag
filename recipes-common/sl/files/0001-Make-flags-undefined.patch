@@ -1,0 +1,35 @@
+From 434a76cf6c29bc0e53dd13ea0fcd19f48cf06e59 Mon Sep 17 00:00:00 2001
+From: Illia Vysochyn <ivysochyn@internships.antmicro.com>
+Date: Sat, 22 Oct 2022 16:34:47 +0200
+Subject: [PATCH] Make flags undefined
+
+Changes 'CC' and 'CFLAGS' variables to undefined, so they can be overriden by environment
+---
+ Makefile | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index c3005d2..9ad1744 100644
+--- a/Makefile
++++ b/Makefile
+@@ -6,13 +6,14 @@
+ #	Last Modified: 2014/03/31
+ #==========================================
+ 
+-CC=gcc
+-CFLAGS=-O -Wall
++CC ?= gcc
++CFLAGS ?= -O -Wall
++LDFLAGS ?= ${LDFLAGS}
+ 
+ all: sl
+ 
+ sl: sl.c sl.h
+-	$(CC) $(CFLAGS) -o sl sl.c -lncurses
++	$(CC) $(CFLAGS) $(LDFLAGS) -o sl sl.c -lncurses
+ 
+ clean:
+ 	rm -f sl
+-- 
+2.38.0
+
