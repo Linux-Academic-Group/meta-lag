@@ -3,7 +3,7 @@
     <remote fetch="https://git.yoctoproject.org/git/" name="yoctoproject"/>
     <remote fetch="https://github.com" name="github"/>
     
-    <project name="Linux-Academic-Group/meta-lag.git" remote="github" revision="1-add-manifest" path="sources/meta-lag">
+    <project name="Linux-Academic-Group/meta-lag.git" remote="github" revision="main" path="sources/meta-lag">
         <linkfile dest="build/conf/bblayers.conf" src="system-releases/unmatched-basic/bblayers.conf"/>
         <linkfile dest="build/conf/local.conf" src="system-releases/unmatched-basic/local.conf"/>
     </project>
