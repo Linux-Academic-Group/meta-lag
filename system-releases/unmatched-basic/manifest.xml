@@ -6,4 +6,6 @@
     <project name="Linux-Academic-Group/meta-lag.git" remote="github" revision="1-add-manifest" path="sources/meta-lag"/>
     <project name="openembedded/meta-openembedded.git" remote="github" revision="kirkstone" path="sources/meta-openembedded"/>
     <project name="poky.git" remote="yoctoproject" revision="kirkstone" path="sources/poky"/>
+    <project name="riscv/meta-riscv.git" remote="github" revision="kirkstone" path="sources/meta-riscv"/>
+    <project name="sifive/meta-sifive.git" remote="github" revision="2022.08" path="sources/meta-sifive"/>
 </manifest>
