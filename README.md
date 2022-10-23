@@ -17,7 +17,8 @@ source sources/poky/oe-init-build-env
 PARALLEL_MAKE="-j $(nproc)" BB_NUMBER_THREADS="$(nproc)" MACHINE="unmatched" bitbake core-image-fun
 ```
 ## Writing built image to SD card
+The `sdX` argument should be changed to corresponding disk partition.
 ```
 cd build/tmp/deploy/images/unmatched/
-xzcat core-image-minimal-unmatched.wic.xz | sudo dd of=/dev/sdd bs=512K iflag=fullblock oflag=direct conv=fsync status=progress
+xzcat core-image-minimal-unmatched.wic.xz | sudo dd of=/dev/sdX bs=512K iflag=fullblock oflag=direct conv=fsync status=progress
 ```
