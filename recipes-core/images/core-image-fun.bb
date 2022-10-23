@@ -8,4 +8,5 @@ LICENSE = "Apache2.0"
 IMAGE_INSTALL += " \
     sl \
     cmatrix \
+    cowsay \
 "
