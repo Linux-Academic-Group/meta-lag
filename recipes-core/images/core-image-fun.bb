@@ -9,4 +9,5 @@ IMAGE_INSTALL += " \
     sl \
     cmatrix \
     cowsay \
+    asciiquarium \
 "
