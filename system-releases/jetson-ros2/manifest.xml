@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote fetch="https://git.yoctoproject.org/git/" name="yoctoproject"/>
+    <remote fetch="https://github.com/Linux-Academic-Group/" name="lag"/>
+    <remote fetch="https://github.com/OE4T/" name="meta-tegra"/>
+    <remote fetch="https://github.com/openembedded/" name="meta-openembedded"/>
+    <remote fetch="https://github.com/ros/" name="meta-ros"/>
+
+    <project name="meta-lag.git" remote="lag" revision="main" path="sources/meta-lag">
+        <linkfile dest="build/conf/bblayers.conf" src="system-releases/jetson-ros2/bblayers.conf"/>
+        <linkfile dest="build/conf/local.conf" src="system-releases/jetson-ros2/local.conf"/>
+    </project>
+
+    <project name="poky.git" remote="yoctoproject" revision="kirkstone" path="sources/poky"/>
+    <project name="meta-ros.git" remote="meta-ros" revision="kirkstone" path="sources/meta-ros"/>
+    <project name="meta-openembedded.git" remote="meta-openembedded" revision="kirkstone" path="sources/meta-openembedded"/>
+    <project name="meta-tegra.git" remote="meta-tegra" revision="kirkstone" path="sources/meta-tegra"/>
+</manifest>
